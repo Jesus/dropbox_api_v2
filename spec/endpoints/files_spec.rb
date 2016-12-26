@@ -417,6 +417,20 @@ context DropboxApi::Endpoints::Files do
       expect(file.name).to eq("file.txt")
     end
 
+    it "overwrites the uploaded file if it exists and the mode is :overwrite", :cassette => "upload/success_overwrite" do
+      file = @client.upload("/file.txt", "Hello Again, Dropbox!", :mode => :overwrite)
+
+      expect(file).to be_a(DropboxApi::Metadata::File)
+      expect(file.name).to eq("file.txt")
+    end
+
+    it "renames the uploaded file if required", :cassette => "upload/success_rename" do
+      file = @client.upload("/file.txt", "Hello Again, Dropbox!", :autorename => true)
+
+      expect(file).to be_a(DropboxApi::Metadata::File)
+      expect(file.name).to eq("file (1).txt")
+    end
+
     context "when too many write operations" do
       it "raises a DropboxApi::Errors::TooManyWriteOperations exception", :cassette => "upload/too_many_write_operations" do
         expect {
