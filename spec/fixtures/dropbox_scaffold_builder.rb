@@ -2,11 +2,9 @@ class DropboxScaffoldBuilder
   PREFIX = "/dropbox_api_fixtures"
 
   def clobber(endpoint_name)
-    begin
-      client.delete(endpoint_prefix endpoint_name)
-    rescue DropboxApi::Errors::NotFoundError
-      # already gone
-    end
+    client.delete(endpoint_prefix endpoint_name)
+  rescue DropboxApi::Errors::NotFoundError
+    # already gone
   end
 
   def generate(endpoint_name)
