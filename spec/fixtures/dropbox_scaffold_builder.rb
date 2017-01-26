@@ -4,7 +4,7 @@ class DropboxScaffoldBuilder
   def clobber(endpoint_name)
     client.delete(endpoint_prefix endpoint_name)
   rescue DropboxApi::Errors::NotFoundError
-    # already gone
+    false
   end
 
   def generate(endpoint_name)
