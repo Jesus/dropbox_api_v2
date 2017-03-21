@@ -31,7 +31,7 @@ module DropboxApi::Endpoints::Files
 
       DropboxApi::Metadata::UploadSessionCursor.new({
         "session_id" => session.session_id,
-        "offset" => content.size
+        "offset" => content.bytesize
       })
     end
   end
