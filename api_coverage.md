@@ -24,7 +24,7 @@ API call | Status
 `/get_preview` | 🌕
 `/get_temporary_link` | 🌕
 `/get_thumbnail` | 🌕
-`/list_folder` | 🌕
+`/list_folder` | 🌔
 `/list_folder/continue` | 🌕
 `/list_folder/get_latest_cursor` | 🌕
 `/list_folder/longpoll` | 🌕
