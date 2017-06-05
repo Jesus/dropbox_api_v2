@@ -15,8 +15,8 @@ what new moon means.
 API call | Status
 --- | :---:
 `/copy` | 🌕
-`/copy_reference/get` | 🌑
-`/copy_reference/save` | 🌑
+`/copy_reference/get` | 🌕
+`/copy_reference/save` | 🌕
 `/create_folder` | 🌕
 `/delete` | 🌕
 `/download` | 🌔

@@ -1,0 +1,42 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/copy_reference/save
+    body:
+      encoding: UTF-8
+      string: '{"copy_reference":"WI-v4zliNDByb3JwejZlNw","path":"/copied-file.txt"}'
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 409
+      message: Conflict
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 05 Jun 2017 09:25:11 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '72'
+      Connection:
+      - keep-alive
+      X-Dropbox-Request-Id:
+      - 33ce84bf79d5f6b5cc5b5bca2884e484
+    body:
+      encoding: UTF-8
+      string: '{"error_summary": "no_permission/.", "error": {".tag": "no_permission"}}'
+    http_version: 
+  recorded_at: Mon, 05 Jun 2017 09:25:11 GMT
+recorded_with: VCR 3.0.3

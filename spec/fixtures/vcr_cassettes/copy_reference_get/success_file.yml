@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/copy_reference/get
+    body:
+      encoding: UTF-8
+      string: '{"path":"/file.txt"}'
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 05 Jun 2017 09:29:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      X-Dropbox-Http-Protocol:
+      - None
+      X-Dropbox-Request-Id:
+      - cd909056b2bd343bb7697ee6ea533efd
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Server-Response-Time:
+      - '149'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"metadata": {".tag": "file", "name": "file.txt", "path_lower": "/file.txt",
+        "path_display": "/file.txt", "id": "id:ghlqX9y278AAAAAAAAAABg", "client_modified":
+        "1988-12-08T01:01:00Z", "server_modified": "2017-06-05T09:29:02Z", "rev":
+        "1588fafe3", "size": 20, "content_hash": "6f18683e28aed77f31f3fc009d3417394a08b1faabf88419ae707f19778301b0"},
+        "copy_reference": "WI-v4zliNDByb3JwejZlNw", "expires": "2047-05-29T09:29:37Z"}'
+    http_version: 
+  recorded_at: Mon, 05 Jun 2017 09:29:37 GMT
+recorded_with: VCR 3.0.3

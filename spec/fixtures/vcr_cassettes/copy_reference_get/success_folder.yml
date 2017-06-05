@@ -1,0 +1,58 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/copy_reference/get
+    body:
+      encoding: UTF-8
+      string: '{"path":"/folder"}'
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v0.11.0
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Mon, 05 Jun 2017 09:29:40 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Cache-Control:
+      - no-cache
+      Pragma:
+      - no-cache
+      X-Content-Type-Options:
+      - nosniff
+      X-Dropbox-Http-Protocol:
+      - None
+      X-Dropbox-Request-Id:
+      - 3e03cceeb688a312b73aa2c9703c9394
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Server-Response-Time:
+      - '161'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"metadata": {".tag": "folder", "name": "folder", "path_lower": "/folder",
+        "path_display": "/folder", "id": "id:ghlqX9y278AAAAAAAAAACA"}, "copy_reference":
+        "WI-v42h5NWxnbDZ2enpjbw", "expires": "2047-05-29T09:29:39Z"}'
+    http_version: 
+  recorded_at: Mon, 05 Jun 2017 09:29:40 GMT
+recorded_with: VCR 3.0.3

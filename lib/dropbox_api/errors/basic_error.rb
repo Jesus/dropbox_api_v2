@@ -54,6 +54,7 @@ module DropboxApi::Errors
   class InsufficientSpaceError < BasicError; end
   class InternalError < BasicError; end
   class InvalidCommentError < BasicError; end
+  class InvalidCopyReferenceError < BasicError; end
   class InvalidCursorError < BasicError; end
   class InvalidDropboxIdError < BasicError; end
   class InvalidEmailError < BasicError; end
