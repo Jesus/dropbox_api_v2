@@ -1,5 +1,5 @@
 module DropboxApi::Errors
-  class CopyReferenceGetError < BasicError
+  class GetCopyReferenceError < BasicError
     ErrorSubtypes = {
       :path => LookupError
     }.freeze

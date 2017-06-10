@@ -1,5 +1,5 @@
 module DropboxApi::Results
-  class CopyReferenceGetResult < DropboxApi::Results::Base
+  class GetCopyReferenceResult < DropboxApi::Results::Base
     # Metadata of the file or folder.
     def resource
       @resource ||= DropboxApi::Metadata::Resource.new @data["metadata"]

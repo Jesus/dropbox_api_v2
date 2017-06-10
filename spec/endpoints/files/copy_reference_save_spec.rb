@@ -9,7 +9,7 @@ describe DropboxApi::Client, "#copy_reference_save" do
     it "returns the saved file", :cassette => "copy_reference_save/success_file" do
       result = @client.copy_reference_save @copy_reference, "/copied-file.txt"
 
-      expect(result).to be_a(DropboxApi::Results::CopyReferenceSaveResult)
+      expect(result).to be_a(DropboxApi::Results::SaveCopyReferenceResult)
       expect(result.resource.name).to eq("copied-file.txt")
     end
   end
@@ -20,7 +20,7 @@ describe DropboxApi::Client, "#copy_reference_save" do
       copy_reference = "WI-v42h5NWxnbDZ2enpjbw"
       result = @client.copy_reference_save copy_reference, "/copied-folder"
 
-      expect(result).to be_a(DropboxApi::Results::CopyReferenceSaveResult)
+      expect(result).to be_a(DropboxApi::Results::SaveCopyReferenceResult)
       expect(result.resource.name).to eq("copied-folder")
     end
   end

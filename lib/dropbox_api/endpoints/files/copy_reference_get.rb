@@ -2,8 +2,8 @@ module DropboxApi::Endpoints::Files
   class CopyReferenceGet < DropboxApi::Endpoints::Rpc
     Method      = :post
     Path        = "/2/files/copy_reference/get".freeze
-    ResultType  = DropboxApi::Results::CopyReferenceGetResult
-    ErrorType   = DropboxApi::Errors::CopyReferenceGetError
+    ResultType  = DropboxApi::Results::GetCopyReferenceResult
+    ErrorType   = DropboxApi::Errors::GetCopyReferenceError
 
     # Get a copy reference to a file or folder.
     # This reference string can be used to save that file or folder

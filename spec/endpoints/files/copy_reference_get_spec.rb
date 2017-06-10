@@ -7,7 +7,7 @@ describe DropboxApi::Client, "#copy_reference_get" do
     it "returns a copy reference", :cassette => "copy_reference_get/success_file" do
       result = @client.copy_reference_get "/file.txt"
 
-      expect(result).to be_a(DropboxApi::Results::CopyReferenceGetResult)
+      expect(result).to be_a(DropboxApi::Results::GetCopyReferenceResult)
       expect(result.resource.name).to eq("file.txt")
       expect(result.copy_reference).to be_a(String)
       expect(result.expires).to be_a(Time)
@@ -18,7 +18,7 @@ describe DropboxApi::Client, "#copy_reference_get" do
     it "returns a copy reference", :cassette => "copy_reference_get/success_folder" do
       result = @client.copy_reference_get("/folder")
 
-      expect(result).to be_a(DropboxApi::Results::CopyReferenceGetResult)
+      expect(result).to be_a(DropboxApi::Results::GetCopyReferenceResult)
       expect(result.resource.name).to eq("folder")
       expect(result.copy_reference).to be_a(String)
       expect(result.expires).to be_a(Time)

@@ -1,5 +1,5 @@
 module DropboxApi::Errors
-  class CopyReferenceSaveError < BasicError
+  class SaveCopyReferenceError < BasicError
     ErrorSubtypes = {
       :path => WriteError,
       :invalid_copy_reference => InvalidCopyReferenceError,
