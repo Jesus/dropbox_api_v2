@@ -9,8 +9,9 @@ module DropboxApi::Endpoints::Files
     # This reference string can be used to save that file or folder
     # to another user's Dropbox by passing it to {Client#copy_reference_save}.
     #
-    # @param path [String] The path to the file or folder you want to get a copy reference to.
-    # @return [DropboxApi::Results::CopyReferenceGetResult]
+    # @param path [String] The path to the file or folder you want to get a
+    #   copy reference to.
+    # @return [DropboxApi::Results::GetCopyReferenceResult]
     add_endpoint :copy_reference_get do |path|
       perform_request({
         :path => path
