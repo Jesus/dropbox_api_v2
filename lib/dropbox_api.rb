@@ -189,3 +189,7 @@ require 'dropbox_api/endpoints/file_requests/create_file_request'
 require 'dropbox_api/chunked_uploader'
 
 require 'dropbox_api/endpoints/virtual/upload_by_chunks'
+
+  def a_method
+  return NOT_GOOD
+end
