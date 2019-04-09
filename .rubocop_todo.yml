@@ -212,10 +212,6 @@ Metrics/MethodLength:
 Metrics/PerceivedComplexity:
   Max: 10
 
-# Offense count: 136
-Naming/ConstantName:
-  Enabled: false
-
 # Offense count: 1
 # Configuration parameters: EnforcedStyleForLeadingUnderscores.
 # SupportedStylesForLeadingUnderscores: disallowed, required, optional
@@ -274,13 +270,6 @@ Style/CaseEquality:
   Exclude:
     - 'lib/dropbox_api/results/copy_batch_check_result.rb'
 
-# Offense count: 166
-# Cop supports --auto-correct.
-# Configuration parameters: AutoCorrect, EnforcedStyle.
-# SupportedStyles: nested, compact
-Style/ClassAndModuleChildren:
-  Enabled: false
-
 # Offense count: 1
 # Cop supports --auto-correct.
 # Configuration parameters: Keywords.
@@ -288,10 +277,6 @@ Style/ClassAndModuleChildren:
 Style/CommentAnnotation:
   Exclude:
     - 'lib/dropbox_api/endpoints/content_download.rb'
-
-# Offense count: 101
-Style/Documentation:
-  Enabled: false
 
 # Offense count: 1
 # Cop supports --auto-correct.
