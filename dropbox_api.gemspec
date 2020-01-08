@@ -23,6 +23,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr"
   spec.add_development_dependency "webmock"
 
-  spec.add_dependency "faraday", "<= 1.0"
+  spec.add_dependency "faraday"
   spec.add_dependency "oauth2", "~> 1.1"
 end
