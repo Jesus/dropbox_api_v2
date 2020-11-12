@@ -139,6 +139,24 @@ Check out the
 [method documentation](http://www.xuuso.com/dropbox_api/DropboxApi/Client.html#upload_by_chunks-instance_method)
 to find out all available options.
 
+### Accessing Team Folders
+
+In order to access your team scope you need to add the namespace_id to you request headers.
+This can be done using the middlewere layer as per the below:
+
+```ruby
+client = DropboxApi::Client.new("VofXAX8D...")
+#=> #<DropboxApi::Client ...>
+namespace_id = client.get_current_account.root_info.root_namespace_id
+client.middleware.prepend do |connection|
+  connection.headers['Dropbox-API-Path-Root'] = "{\".tag\": \"namespace_id\", \"namespace_id\": \"#{namespace_id}\"}"
+end
+
+client.list_folder('')
+#=> Now returns the team folders
+```
+
+
 ## Dependencies
 
 This gem depends on

@@ -15,7 +15,12 @@ module DropboxApi::Metadata
   #   "disabled": false,
   #   "is_teammate": true,
   #   "profile_photo_url": "https://dl-web.dropbox.com/account_photo/get/dbid%3AAAH4f99T0taONIb-OurWxbNQ6ywGRopQngc?vers=1453416696524&size=128x128",
-  #   "team_member_id": "dbmid:AAHhy7WsR0x-u4ZCqiDl5Fz5zvuL3kmspwU"
+  #   "team_member_id": "dbmid:AAHhy7WsR0x-u4ZCqiDl5Fz5zvuL3kmspwU",
+  #   "root_info": {
+  #     root_namespace_id: 7,
+  #     home_namespace_id: 1,
+  #     home_path: "/Franz Ferdinand"
+  #   }
   # }
   # ```
   class BasicAccount < Base
@@ -27,5 +32,6 @@ module DropboxApi::Metadata
     field :is_teammate, :boolean, :optional
     field :profile_photo_url, String, :optional
     field :team_member_id, :boolean, :optional
+    field :root_info, DropboxApi::Metadata::RootInfo, :optional
   end
 end
