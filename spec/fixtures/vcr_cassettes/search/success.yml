@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.dropboxapi.com/2/files/search
+    uri: https://api.dropboxapi.com/2/files/search_v2
     body:
       encoding: UTF-8
       string: '{"start":0,"max_results":100,"mode":"filename","query":"image.png","path":""}'
@@ -56,6 +56,6 @@ http_interactions:
         "id": "id:jVVdzRI3CnAAAAAAAAAAAQ", "client_modified": "2016-05-22T09:29:22Z",
         "server_modified": "2016-06-04T08:36:02Z", "rev": "1a4524061bdd", "size":
         77019}}], "more": false, "start": 1}'
-    http_version: 
+    http_version:
   recorded_at: Sat, 04 Jun 2016 08:36:26 GMT
 recorded_with: VCR 3.0.1

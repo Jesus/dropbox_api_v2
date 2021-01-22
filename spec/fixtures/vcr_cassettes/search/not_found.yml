@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: https://api.dropboxapi.com/2/files/search
+    uri: https://api.dropboxapi.com/2/files/search_v2
     body:
       encoding: UTF-8
       string: '{"start":0,"max_results":100,"mode":"filename","query":"/image.png","path":"/bad_folder"}'
@@ -38,6 +38,6 @@ http_interactions:
       encoding: UTF-8
       string: '{"error_summary": "path/not_found/..", "error": {".tag": "path", "path":
         {".tag": "not_found"}}}'
-    http_version: 
+    http_version:
   recorded_at: Sat, 04 Jun 2016 08:36:27 GMT
 recorded_with: VCR 3.0.1

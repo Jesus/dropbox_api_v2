@@ -1,7 +1,7 @@
 module DropboxApi::Endpoints::Files
   class Search < DropboxApi::Endpoints::Rpc
     Method      = :post
-    Path        = "/2/files/search".freeze
+    Path        = "/2/files/search_v2".freeze
     ResultType  = DropboxApi::Results::SearchResult
     ErrorType   = DropboxApi::Errors::SearchError
 
