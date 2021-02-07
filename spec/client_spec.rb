@@ -23,22 +23,15 @@ module DropboxApi
         faraday.use MiddlewareMiddle
       end
 
-      # Workaround the API changes Faraday introduced in 1.0 :(
-      if Faraday::VERSION.start_with? '0.'
-        expect(connection.builder.handlers).to eq [
+      expect(connection.builder).to eq(Faraday::RackBuilder.new(
+        [
+          DropboxApi::MiddleWare::PathRoot,
           MiddlewareStart,
           MiddlewareMiddle,
-          MiddlewareEnd,
-          Faraday::Adapter::NetHttpPersistent
-        ]
-      else
-        expected = Faraday::RackBuilder.new(
-          [MiddlewareStart, MiddlewareMiddle, MiddlewareEnd],
-          Faraday::Adapter::NetHttpPersistent
-        )
-
-        expect(connection.builder).to eq(expected)
-      end
+          MiddlewareEnd
+        ],
+        Faraday::Adapter::NetHttpPersistent
+      ))
     end
   end
 end

@@ -40,4 +40,30 @@ describe DropboxApi::Client, '#list_folder' do
       @client.list_folder '/img.png', invalid_arg: 'value'
     }.to raise_error(ArgumentError)
   end
+
+  context 'with a namespace ID' do
+    it 'works with a namespace_id', cassette: 'list_folder/success_with_namespace_id' do
+      @client.namespace_id = 70721710
+      @client.list_folder '/dropbox_api_fixtures'
+    end
+
+    it 'fails with an invalid namespace ID', cassette: 'list_folder/invalid_namespace_id' do
+      @client.namespace_id = 938429923
+
+      expect do
+        @client.list_folder '/dropbox_api_fixtures'
+      end.to raise_error(DropboxApi::Errors::HttpError)
+    end
+
+    it 'works if namespace ID is unset ', cassette: 'list_folder/unset_namespace_id' do
+      @client.namespace_id = 70721710
+
+      # we expect this to use a namespace ID
+      @client.list_folder '/dropbox_api_fixtures'
+
+      @client.namespace_id = nil
+      # we expect the next not to use any namespace ID
+      @client.list_folder '/dropbox_api_fixtures'
+    end
+  end
 end

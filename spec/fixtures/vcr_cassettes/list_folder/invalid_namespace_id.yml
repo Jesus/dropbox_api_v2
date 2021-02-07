@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/list_folder
+    body:
+      encoding: UTF-8
+      string: '{"recursive":false,"include_media_info":false,"include_deleted":false,"path":"/dropbox_api_fixtures"}'
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Type:
+      - application/json
+      Dropbox-Api-Path-Root:
+      - '{".tag": "namespace_id", "namespace_id": "938429923"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 422
+      message: Unprocessable Entity
+    headers:
+      Content-Security-Policy:
+      - sandbox allow-forms allow-scripts
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 07 Feb 2021 18:16:10 GMT
+      Server:
+      - envoy
+      Vary:
+      - Accept-Encoding
+      X-Dropbox-Request-Id:
+      - f99de91c622d42338d3fa3bdc30a2bb9
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"error_summary": "no_permission/..", "error": {".tag": "no_permission"}}'
+  recorded_at: Sun, 07 Feb 2021 18:16:10 GMT
+recorded_with: VCR 6.0.0

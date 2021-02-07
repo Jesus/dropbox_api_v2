@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/list_folder
+    body:
+      encoding: UTF-8
+      string: '{"recursive":false,"include_media_info":false,"include_deleted":false,"path":"/dropbox_api_fixtures"}'
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v1.3.0
+      Content-Type:
+      - application/json
+      Dropbox-Api-Path-Root:
+      - '{".tag": "namespace_id", "namespace_id": "70721710"}'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      Date:
+      - Sun, 07 Feb 2021 17:52:42 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - envoy
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Server-Response-Time:
+      - '131'
+      Vary:
+      - Accept-Encoding
+      X-Dropbox-Request-Id:
+      - 5f802a722df244b4ac1008d639d95b18
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"entries": [{".tag": "folder", "name": "chunked_uploader", "path_lower":
+        "/dropbox_api_fixtures/chunked_uploader", "path_display": "/dropbox_api_fixtures/chunked_uploader",
+        "id": "id:L5U1_AOVa-QAAAAAAAA4cA"}, {".tag": "folder", "name": "get_metadata",
+        "path_lower": "/dropbox_api_fixtures/get_metadata", "path_display": "/dropbox_api_fixtures/get_metadata",
+        "id": "id:L5U1_AOVa-QAAAAAAAA4ig"}, {".tag": "folder", "name": "get_thumbnail_batch",
+        "path_lower": "/dropbox_api_fixtures/get_thumbnail_batch", "path_display":
+        "/dropbox_api_fixtures/get_thumbnail_batch", "id": "id:L5U1_AOVa-QAAAAAAAA4jg"},
+        {".tag": "folder", "name": "get_shared_link_metadata", "path_lower": "/dropbox_api_fixtures/get_shared_link_metadata",
+        "path_display": "/dropbox_api_fixtures/get_shared_link_metadata", "id": "id:L5U1_AOVa-QAAAAAAAA4kA"},
+        {".tag": "folder", "name": "copy_batch", "path_lower": "/dropbox_api_fixtures/copy_batch",
+        "path_display": "/dropbox_api_fixtures/copy_batch", "id": "id:L5U1_AOVa-QAAAAAAAA4kw"},
+        {".tag": "folder", "name": "create_file_request", "path_lower": "/dropbox_api_fixtures/create_file_request",
+        "path_display": "/dropbox_api_fixtures/create_file_request", "id": "id:L5U1_AOVa-QAAAAAAAA4lg"},
+        {".tag": "folder", "name": "delete", "path_lower": "/dropbox_api_fixtures/delete",
+        "path_display": "/dropbox_api_fixtures/delete", "id": "id:L5U1_AOVa-QAAAAAAAA4mA"},
+        {".tag": "folder", "name": "list_folder", "path_lower": "/dropbox_api_fixtures/list_folder",
+        "path_display": "/dropbox_api_fixtures/list_folder", "id": "id:L5U1_AOVa-QAAAAAAAA4ng"},
+        {".tag": "folder", "name": "upload", "path_lower": "/dropbox_api_fixtures/upload",
+        "path_display": "/dropbox_api_fixtures/upload", "id": "id:L5U1_AOVa-QAAAAAAAA4qw"},
+        {".tag": "folder", "name": "search", "path_lower": "/dropbox_api_fixtures/search",
+        "path_display": "/dropbox_api_fixtures/search", "id": "id:L5U1_AOVa-QAAAAAAAA4sQ"}],
+        "cursor": "AAEmtUf7rHy0z1_fYArj36RUfnoTTCdp3QzlAlWoY9SbhGKHKpqmFjyskrVZSZcQrnJwd98VFmM-mfW2W4eEN4XM6MoFpifOGCXR6a0aqib2uaHWZseMtfrDEbihpeIjg4nGNB24BH41q3rvHzEaZWTFQhmUpkF6PtLRFCnx0tegb8jTTMZlYBCoL-JbiH4TQZyR9ee10vedEEu8pi8zWuuEWow5aCCrrKN-2ZEgpTEJqxvN61qIHvHlWdpiO1nesPM",
+        "has_more": false}'
+  recorded_at: Sun, 07 Feb 2021 17:52:42 GMT
+recorded_with: VCR 6.0.0

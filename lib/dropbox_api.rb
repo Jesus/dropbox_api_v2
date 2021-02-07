@@ -7,11 +7,13 @@ require 'faraday'
 
 require 'dropbox_api/authenticator'
 
-require 'dropbox_api/middleware/decode_result'
-require 'dropbox_api/middleware/stack'
-
-require 'dropbox_api/metadata/field'
 require 'dropbox_api/metadata/base'
+require 'dropbox_api/metadata/field'
+require 'dropbox_api/metadata/namespace_id'
+
+require 'dropbox_api/middleware/decode_result'
+require 'dropbox_api/middleware/path_root'
+require 'dropbox_api/middleware/stack'
 
 require 'dropbox_api/metadata/tag'
 require 'dropbox_api/metadata/access_level'
@@ -32,6 +34,9 @@ require 'dropbox_api/metadata/member_permission'
 require 'dropbox_api/metadata/member_permission_list'
 require 'dropbox_api/metadata/add_file_member_result'
 require 'dropbox_api/metadata/parent_folder_access_info'
+require 'dropbox_api/metadata/team_root_info'
+require 'dropbox_api/metadata/user_root_info'
+require 'dropbox_api/metadata/root_info'
 require 'dropbox_api/metadata/basic_account'
 require 'dropbox_api/metadata/link_permissions'
 require 'dropbox_api/metadata/team'

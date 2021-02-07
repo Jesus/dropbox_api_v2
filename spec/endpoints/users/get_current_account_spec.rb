@@ -8,5 +8,6 @@ describe DropboxApi::Client, '#get_current_account' do
     account = @client.get_current_account
 
     expect(account).to be_a(DropboxApi::Metadata::BasicAccount)
+    expect(account.root_info).to be_a(DropboxApi::Metadata::UserRootInfo)
   end
 end

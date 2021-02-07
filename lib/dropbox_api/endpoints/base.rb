@@ -52,7 +52,12 @@ module DropboxApi::Endpoints
     end
 
     def run_request(body, headers)
-      @connection.run_request(self.class::Method, self.class::Path, body, headers)
+      @connection.run_request(
+        self.class::Method,
+        self.class::Path,
+        body,
+        headers
+      )
     end
   end
 end

@@ -9,6 +9,14 @@ module DropboxApi
       @connection_builder.middleware
     end
 
+    def namespace_id=(value)
+      @connection_builder.namespace_id = value
+    end
+
+    def namespace_id
+      @connection_builder.namespace_id
+    end
+
     # @!visibility private
     def self.add_endpoint(name, endpoint)
       define_method(name) do |*args, &block|
