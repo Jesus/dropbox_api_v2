@@ -11,11 +11,10 @@ module DropboxApi::Results
     # Used for paging. If true, indicates there is another page of results
     # available that can be fetched by calling search again.
     def has_more?
-      @data['more'].to_s == 'true'
+      @data['has_more'].to_s == 'true'
     end
 
-    # Pass the cursor into #search_continue to fetch the next page of results
-    # (not yet implemented).
+    # Pass the cursor into #search_continue to fetch the next page of results.
     # This field is optional.
     def cursor
       @data['cursor']

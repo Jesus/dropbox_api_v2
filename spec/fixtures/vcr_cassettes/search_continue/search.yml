@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/search_v2
+    body:
+      encoding: UTF-8
+      string: '{"query":"file","options":{"max_results":1}}'
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v1.4.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Disposition:
+      - attachment
+      Content-Security-Policy:
+      - sandbox
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 23 Apr 2021 21:27:36 GMT
+      Pragma:
+      - no-cache
+      X-Content-Security-Policy:
+      - sandbox
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      X-Server-Response-Time:
+      - '371'
+      X-Webkit-Csp:
+      - sandbox
+      Server:
+      - envoy
+      Vary:
+      - Accept-Encoding
+      X-Dropbox-Response-Origin:
+      - far_remote
+      X-Dropbox-Request-Id:
+      - 19d322885ce54309b00e9a851d04a3dc
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"cursor":"ChIKBGZpbGUSAhABIgYIoOC2/yEQAQ==","has_more":true,"matches":[{"match_type":{".tag":"filename"},"metadata":{".tag":"metadata","metadata":{".tag":"folder","id":"id:IrG7JlIiSDcAAAAAAAAARA","name":"create_file_request","path_display":"/dropbox_api_fixtures/create_file_request","path_lower":"/dropbox_api_fixtures/create_file_request"}}}]}'
+  recorded_at: Fri, 23 Apr 2021 21:27:36 GMT
+recorded_with: VCR 6.0.0

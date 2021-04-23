@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.dropboxapi.com/2/files/search/continue_v2
+    body:
+      encoding: UTF-8
+      string: '{"cursor":"ChIKBGZpbGUSAhABIgYIoOC2/yEQAQ=="}'
+    headers:
+      Authorization:
+      - Bearer MOCK_AUTHORIZATION_BEARER
+      User-Agent:
+      - Faraday v1.4.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-cache
+      Content-Disposition:
+      - attachment
+      Content-Security-Policy:
+      - sandbox
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 23 Apr 2021 21:38:45 GMT
+      Pragma:
+      - no-cache
+      X-Content-Security-Policy:
+      - sandbox
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - sameorigin
+      X-Server-Response-Time:
+      - '212'
+      X-Webkit-Csp:
+      - sandbox
+      Server:
+      - envoy
+      Vary:
+      - Accept-Encoding
+      X-Dropbox-Response-Origin:
+      - far_remote
+      X-Dropbox-Request-Id:
+      - abfc7c7547b4464792780abcec56091d
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: ASCII-8BIT
+      string: '{"cursor":"ChIKBGZpbGUSAhABIgYIoOC2/yEQAg==","has_more":true,"matches":[{"match_type":{".tag":"filename"},"metadata":{".tag":"metadata","metadata":{".tag":"file","client_modified":"2021-04-23T21:21:37Z","content_hash":"ddc458cb9f13e2e9f4b02a579cc752c8bbcbb7fdfd4c54faea8e98b7f4b80ea8","id":"id:IrG7JlIiSDcAAAAAAAAAPg","is_downloadable":true,"name":"findable_file.txt","path_display":"/dropbox_api_fixtures/search/findable_file.txt","path_lower":"/dropbox_api_fixtures/search/findable_file.txt","rev":"015c0aa619d60c5000000021fedb020","server_modified":"2021-04-23T21:21:38Z","size":4}}}]}'
+  recorded_at: Fri, 23 Apr 2021 21:38:45 GMT
+recorded_with: VCR 6.0.0
