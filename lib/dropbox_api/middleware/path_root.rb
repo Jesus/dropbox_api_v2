@@ -20,7 +20,7 @@ module DropboxApi::MiddleWare
       JSON.dump(
         DropboxApi::Metadata::NamespaceId.new({
           'namespace_id' => namespace_id
-        })
+        }).to_hash
       )
     end
 
